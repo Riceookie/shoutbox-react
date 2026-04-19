@@ -22,8 +22,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Instalacja bibliotek
-            - name: Instalacja środowiska Node.js
+      - name: Instalacja bibliotek --legacy-peer-deps
+      - name: Instalacja środowiska Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
