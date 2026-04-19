@@ -23,6 +23,17 @@ jobs:
         with:
           node-version: 22
       - name: Instalacja bibliotek
+            - name: Instalacja środowiska Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Instalacja bibliotek --legacy-peer-deps
+        # ZMIENIAMY TĘ LINIJKĘ:
+        run: npm install --legacy-peer-deps
+
+      - name: Zbudowanie paczki React
+        run: npm run build
         run: npm install
       - name: Zbudowanie paczki React
         run: npm run build
